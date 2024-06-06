@@ -1,4 +1,16 @@
 *{
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0 ;
+  padding: 0 ;
+}
+
+.modelThree{
+  height: 75vh !important;
+  width: 30vw !important;
+}
+
+@media screen and (max-width: 800px) {
+  .modelThree{
+    height: 50vh !important;
+    width: 80vw !important;
+  }
 }

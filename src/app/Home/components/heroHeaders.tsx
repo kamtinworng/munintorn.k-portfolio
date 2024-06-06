@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Container,
   Title,
   Button,
   Group,
@@ -10,34 +9,47 @@ import {
   ThemeIcon,
   rem,
   Flex,
+  Avatar,
+  Stack,
 } from "@mantine/core";
-import { IconCheck } from "@tabler/icons-react";
+import { IconBrandGithub, IconCheck, IconMail } from "@tabler/icons-react";
+import { Model } from "./modelIsland";
+import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
+
+import { Html, OrbitControls, useProgress } from "@react-three/drei";
+
+function Loader() {
+  const { progress } = useProgress();
+  return <Html>{progress} % loaded</Html>;
+}
 
 export function HeroBullets() {
   return (
     <Flex
-      mih={"100vh"}
-      gap="md"
-      justify="space-between"
-      align="center"
-      direction="row"
-      wrap="wrap"
-      style={{ margin: "lg" }}
+      ml={{ base: "md", sm: "xl", lg: "100px" }}
+      mr={{ base: "md", sm: "xl", lg: "50px" }}
+      mt={{ base: "md", sm: "xl", lg: "50px" }}
+      justify={"center"}
+      wrap={{ base: "wrap-reverse", lg: "nowrap" }}
+      mb="lg"
     >
       <div>
         <div>
-          <Title>
-            Mr.{" "}
-            <Text component="span" c={"brand"} inherit>
-              Munintorn Kamtinworng
-            </Text>
-            <br />
-            Front-End Developer
-          </Title>
+          <Stack gap={"lg"}>
+            <Avatar size={"150px"} src="./platform.png" alt="it's me" />
+            <Title>
+              Mr.{" "}
+              <Text component="span" c={"brand"} inherit>
+                Munintorn Kamtinworng
+              </Text>
+              <br />
+              Front-End Developer
+            </Title>
+          </Stack>
           <Text c="dimmed" mt="md">
-            Build fully functional accessible web applications faster than ever
-            – Mantine includes more than 120 customizable components and hooks
-            to cover you in any situation
+            ผม – Mantine includes more than 120 customizable components and
+            hooks to cover you in any situation
           </Text>
 
           <List
@@ -68,15 +80,30 @@ export function HeroBullets() {
           </List>
 
           <Group mt={30}>
-            <Button radius="xl" size="md">
-              Get started
+            <Button radius="xl" size="md" leftSection={<IconBrandGithub />}>
+              GitHub
             </Button>
-            <Button variant="default" radius="xl" size="md">
-              Source code
+            <Button
+              variant="default"
+              radius="xl"
+              size="md"
+              leftSection={<IconMail />}
+            >
+              Contacts
             </Button>
           </Group>
         </div>
-        {/* <Image src={image.src} className={classes.image} /> */}
+      </div>
+      <div>
+        <Canvas
+          className="modelThree"
+          camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 5, 180] }}
+        >
+          <Suspense fallback={<Loader />}>
+            <Model />
+            <OrbitControls autoRotate enableZoom={false} />
+          </Suspense>
+        </Canvas>
       </div>
     </Flex>
   );
