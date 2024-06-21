@@ -9,6 +9,7 @@ import {
   IconBrandReact,
   IconBrandNextjs,
 } from "@tabler/icons-react";
+import { SiFlutter } from "react-icons/si";
 import style from "styled-jsx/style";
 
 export const professional = [
@@ -91,6 +92,12 @@ export const professional = [
       />
     ),
     name: "NEXTJS",
+    detail:
+      "Please click anywhere on this card to claim your reward, this is not a",
+  },
+  {
+    icon: <SiFlutter style={{ width: rem(80), height: rem(80) }} />,
+    name: "FLUTTER",
     detail:
       "Please click anywhere on this card to claim your reward, this is not a",
   },

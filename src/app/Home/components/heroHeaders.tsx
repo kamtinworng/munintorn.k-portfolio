@@ -33,11 +33,16 @@ export function HeroBullets() {
       justify={"center"}
       wrap={{ base: "wrap-reverse", lg: "nowrap" }}
       mb="lg"
+      id="Home"
     >
       <div>
         <div>
-          <Stack gap={"lg"}>
-            <Avatar size={"150px"} src="./platform.png" alt="it's me" />
+          <Flex
+            gap={"lg"}
+            align={{ base: "center", lg: "flex-start" }}
+            direction={"column"}
+          >
+            <Avatar size={"150px"} src="./profile_1.jpg" alt="it's me" />
             <Title>
               Mr.{" "}
               <Text component="span" c={"brand"} inherit>
@@ -46,10 +51,12 @@ export function HeroBullets() {
               <br />
               Front-End Developer
             </Title>
-          </Stack>
+          </Flex>
           <Text c="dimmed" mt="md">
-            ผม – Mantine includes more than 120 customizable components and
-            hooks to cover you in any situation
+            สวัสดีครับ – ผมจบการศึกษาจาก สถาบันการอาชีวศึกษาภาคใต้ 3 ในสาขาวิชา
+            เทคโนโลยีสารสนเทศ
+            และมีประสบการณ์ทำงานด้านการเขียนโปรแกรมเป็นระยะเวลา 1 ปี 2 เดือน
+            ในระหว่างการทำงานที่ผ่านมา
           </Text>
 
           <List
@@ -66,24 +73,30 @@ export function HeroBullets() {
             }
           >
             <List.Item>
-              <b>TypeScript based</b> – build type safe applications, all
-              components and hooks export types
+              <b>วุฒิการศึกษา</b> – ปริญญาตรี สาขาวิชาเทคโนโลยีสารสนเทศ
             </List.Item>
             <List.Item>
-              <b>Free and open source</b> – all packages have MIT license, you
-              can use Mantine in any project
+              <b>ประสบการณ์ทำงาน</b> – 1ปี 2เดือน
             </List.Item>
             <List.Item>
-              <b>No annoying focus ring</b> – focus ring will appear only when
-              user navigates with keyboard
+              <b>เกณฑ์ทหาร</b> – ผ่านการเกณฑ์ทหารแล้วในปี 2024
             </List.Item>
           </List>
 
           <Group mt={30}>
-            <Button radius="xl" size="md" leftSection={<IconBrandGithub />}>
+            <Button
+              component="a"
+              href="https://github.com/kamtinworng"
+              radius="xl"
+              size="md"
+              target="_blank"
+              leftSection={<IconBrandGithub />}
+            >
               GitHub
             </Button>
             <Button
+              component="a"
+              href="mailto:mkamtinworng@gmail.com"
               variant="default"
               radius="xl"
               size="md"

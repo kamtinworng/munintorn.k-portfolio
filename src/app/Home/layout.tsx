@@ -24,10 +24,10 @@ export default function Pagelayout({
 }) {
   const [opened, { toggle }] = useDisclosure();
   const { setColorScheme } = useMantineColorScheme();
-  const computedColorScheme = useComputedColorScheme("light", {
+  const computedColorScheme = useComputedColorScheme("dark", {
     getInitialValueInEffect: true,
   });
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   return (
     <AppShell
       header={{ height: 60 }}
@@ -44,9 +44,9 @@ export default function Pagelayout({
             <Title order={4}>Munintorn Kamtonwong</Title>
             <Group ml="xl" gap={"lg"} visibleFrom="sm">
               <UnstyledButton>Home</UnstyledButton>
-              <UnstyledButton>Blog</UnstyledButton>
-              <UnstyledButton>Contacts</UnstyledButton>
-              <UnstyledButton>Support</UnstyledButton>
+              <UnstyledButton>About Me</UnstyledButton>
+              <UnstyledButton>Skillset</UnstyledButton>
+              <UnstyledButton>Workings</UnstyledButton>
               <UnstyledButton
                 onClick={() => {
                   setColorScheme(
@@ -75,9 +75,9 @@ export default function Pagelayout({
       <AppShell.Navbar py="md" px={4}>
         <Stack gap={"lg"}>
           <UnstyledButton>Home</UnstyledButton>
-          <UnstyledButton>Blog</UnstyledButton>
-          <UnstyledButton>Contacts</UnstyledButton>
-          <UnstyledButton>Support</UnstyledButton>
+          <UnstyledButton>About Me</UnstyledButton>
+          <UnstyledButton>Skillset</UnstyledButton>
+          <UnstyledButton>Workings</UnstyledButton>
         </Stack>
       </AppShell.Navbar>
 

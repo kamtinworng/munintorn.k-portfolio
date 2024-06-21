@@ -9,6 +9,7 @@ import {
   Card,
   Stack,
   Group,
+  Box,
 } from "@mantine/core";
 import { professional } from "./value/professional";
 import { backend } from "./value/backend";
@@ -18,15 +19,12 @@ export default function ProfessionalSkillset() {
   const cardItemProfessional = professional.map((item) => {
     return (
       <Card shadow="sm" padding="xl">
-        <Card.Section mt={"xs"} ml={"xs"}>
-          {item.icon}
-        </Card.Section>
-        <Text fw={500} size="lg" mt="md">
-          {item.name}
-        </Text>
-        <Text mt="xs" c="dimmed" size="sm">
-          {item.detail}
-        </Text>
+        <Center>{item.icon}</Center>
+        <Center>
+          <Text fw={500} size="lg" mt="md">
+            {item.name}
+          </Text>
+        </Center>
       </Card>
     );
   });
@@ -34,79 +32,59 @@ export default function ProfessionalSkillset() {
   const cardItemBACKEND = backend.map((item) => {
     return (
       <Card shadow="sm" padding="xl">
-        <Card.Section mt={"xs"} ml={"xs"}>
-          {item.icon}
-        </Card.Section>
-        <Text fw={500} size="lg" mt="md">
-          {item.name}
-        </Text>
-        <Text mt="xs" c="dimmed" size="sm">
-          {item.detail}
-        </Text>
+        <Center>{item.icon}</Center>
+        <Center>
+          <Text fw={500} size="lg" mt="md">
+            {item.name}
+          </Text>
+        </Center>
       </Card>
     );
   });
   const cardItemDatabase = database.map((item) => {
     return (
       <Card shadow="sm" padding="xl">
-        <Card.Section mt={"xs"} ml={"xs"}>
-          {item.icon}
-        </Card.Section>
-        <Text fw={500} size="lg" mt="md">
-          {item.name}
-        </Text>
-        <Text mt="xs" c="dimmed" size="sm">
-          {item.detail}
-        </Text>
+        <Center>{item.icon}</Center>
+        <Center>
+          <Text fw={500} size="lg" mt="md">
+            {item.name}
+          </Text>
+        </Center>
       </Card>
     );
   });
 
   return (
-    <Container mt={"md"} fluid mb={"lg"}>
-      <Stack>
-        <Group>
-          <Center>
-            <Title order={1}>
-              Professional{" "}
-              <Text span c={"brand"} inherit>
-                Skillset
-              </Text>
-            </Title>
-          </Center>
-          <SimpleGrid cols={{ lg: 5, md: 3, sm: 1 }}>
-            {cardItemProfessional}
-          </SimpleGrid>
-        </Group>
+    <Stack p={"lg"}>
+      <Title order={1}>
+        Professional{" "}
+        <Text span c={"brand"} inherit>
+          Skillset
+        </Text>
+      </Title>
+      <SimpleGrid spacing="xl" cols={{ lg: 7, md: 4, sm: 2, xs: 2 }}>
+        {cardItemProfessional}
+      </SimpleGrid>
 
-        <Group>
-          <Center>
-            <Title order={1}>
-              BACKEND{" "}
-              <Text span c={"brand"} inherit>
-                Skillset
-              </Text>
-            </Title>
-          </Center>
-          <SimpleGrid cols={{ lg: 5, md: 3, sm: 1 }}>
-            {cardItemBACKEND}
-          </SimpleGrid>
-        </Group>
+      <Title order={1}>
+        BACKEND{" "}
+        <Text span c={"brand"} inherit>
+          Skillset
+        </Text>
+      </Title>
+      <SimpleGrid spacing="xl" cols={{ lg: 7, md: 4, sm: 2, xs: 2 }}>
+        {cardItemBACKEND}
+      </SimpleGrid>
 
-        <Group>
-          <Center>
-            <Title order={1}>
-              DATABASE{" "}
-              <Text span c={"brand"} inherit>
-                Skillset
-              </Text>
-            </Title>
-          </Center>
-          <SimpleGrid cols={{ lg: 5, md: 3, sm: 1 }}>
-            {cardItemDatabase}
-          </SimpleGrid>
-        </Group>
-      </Stack>
-    </Container>
+      <Title order={1}>
+        DATABASE{" "}
+        <Text span c={"brand"} inherit>
+          Skillset
+        </Text>
+      </Title>
+      <SimpleGrid spacing="xl" cols={{ lg: 7, md: 4, sm: 2, xs: 2 }}>
+        {cardItemDatabase}
+      </SimpleGrid>
+    </Stack>
   );
 }
