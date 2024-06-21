@@ -29,7 +29,7 @@ export function AboutMe() {
     <Container h={"100%"} fluid p={0}>
       <SimpleGrid cols={{ md: 2, sm: 1 }}>
         <Box bg={"brand"}>
-          <Center>
+          <Center mt={"md"}>
             <Title order={1}>ABOUT ME 👨‍💻</Title>
           </Center>
           <Text mb="md" p={"md"}>
@@ -57,7 +57,7 @@ export function AboutMe() {
             ซึ่งช่วยให้ผมสามารถนำความรู้ที่ได้รับมาใช้ในการพัฒนางานของผมให้มีคุณภาพและประสิทธิภาพมากยิ่งขึ้น
           </Text>
         </Box>
-        <Box pr={"md"} mt={"sm"}>
+        <Box>
           <Image radius="md" h={400} src="/profile.jpg" alt="profile" />
         </Box>
       </SimpleGrid>

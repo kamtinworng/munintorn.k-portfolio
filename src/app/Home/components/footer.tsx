@@ -15,15 +15,18 @@ import {
   IconBrandYoutube,
   IconBrandInstagram,
   IconBallBasketball,
+  IconPhone,
+  IconMail,
+  IconBrandGithub,
 } from "@tabler/icons-react";
 // import { MantineLogo } from "@mantinex/mantine-logo";
 
 const links = [
-  { link: "#", label: "Contact" },
-  { link: "#", label: "Privacy" },
-  { link: "#", label: "Blog" },
-  { link: "#", label: "Store" },
-  { link: "#", label: "Careers" },
+  { link: "#", label: "095-2930100" },
+  { link: "#", label: "Mkamtinworng@gmail.com" },
+  { link: "#", label: "gitHub-Kamtinworng" },
+  // { link: "#", label: "Store" },
+  // { link: "#", label: "Careers" },
 ];
 
 export default function Footer() {
@@ -56,19 +59,19 @@ export default function Footer() {
           <Group>{items}</Group>
           <Group gap="xs" justify="flex-end" wrap="nowrap">
             <ActionIcon size="lg" variant="default" radius="xl">
-              <IconBrandTwitter
+              <IconPhone
                 style={{ width: rem(18), height: rem(18) }}
                 stroke={1.5}
               />
             </ActionIcon>
             <ActionIcon size="lg" variant="default" radius="xl">
-              <IconBrandYoutube
+              <IconMail
                 style={{ width: rem(18), height: rem(18) }}
                 stroke={1.5}
               />
             </ActionIcon>
             <ActionIcon size="lg" variant="default" radius="xl">
-              <IconBrandInstagram
+              <IconBrandGithub
                 style={{ width: rem(18), height: rem(18) }}
                 stroke={1.5}
               />

@@ -131,7 +131,7 @@ export function Workings() {
           </List>
         </Card.Section>
 
-        <Card.Section pl={"md"} pr={"md"}>
+        <Card.Section pl={"md"} pr={"md"} mb={"md"}>
           <Text mt="md" c="dimmed">
             Tools
           </Text>
