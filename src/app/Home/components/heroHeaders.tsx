@@ -49,7 +49,7 @@ export function HeroBullets() {
                 Munintorn Kamtinworng
               </Text>
               <br />
-              Front-End Developer
+              FrontEnd AND BackEnd Developer
             </Title>
           </Flex>
           <Text c="dimmed" mt="md">
