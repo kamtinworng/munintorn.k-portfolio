@@ -46,7 +46,7 @@ export function HeroBullets() {
             <Title>
               Mr.{" "}
               <Text component="span" c={"brand"} inherit>
-                มุนินทร คำทินวงศ์
+                Munintorn Kamtinworng
               </Text>
               <br />
               FrontEnd AND BackEnd Developer
